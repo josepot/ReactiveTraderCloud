@@ -3,7 +3,9 @@ import { lazy, Suspense, useRef } from "react"
 import { analytics$ } from "@/services/analytics"
 import styled from "styled-components"
 import { useHasItBeenVisible } from "@/utils/useHasItBeenVisible"
-const AnalyticsCore = lazy(() => import("./AnalyticsCore"))
+
+const mod = import("./AnalyticsCore")
+const AnalyticsCore = lazy(() => mod)
 
 const AnalyticsWrapper = styled.div`
   padding: 0.5rem 1rem 0.5rem 0;

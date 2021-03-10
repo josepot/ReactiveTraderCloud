@@ -2,7 +2,9 @@ import { Loader } from "@/components/Loader"
 import { lazy, Suspense } from "react"
 import { trades$ } from "@/services/trades"
 import styled from "styled-components"
-const TradesCore = lazy(() => import("./TradesCore"))
+
+const mod = import("./TradesCore")
+const TradesCore = lazy(() => mod)
 
 const TradesWrapper = styled.article`
   height: 100%;

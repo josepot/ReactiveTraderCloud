@@ -7,7 +7,9 @@ import {
 } from "@/services/currencyPairs"
 import { getHistoricalPrices$, getPrice$ } from "@/services/prices"
 import styled from "styled-components"
-const LiveRatesCore = lazy(() => import("./LiveRatesCore"))
+
+const mod = import("./LiveRatesCore")
+const LiveRatesCore = lazy(() => mod)
 
 currencyPairs$.subscribe()
 currencyPairDependant$((symbol: string) =>

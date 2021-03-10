@@ -1,7 +1,6 @@
 {
   "name": "new-reactive-trader-cloud",
   "description": "Reactive Trader® - Cloud edition. Example reactive currency pair trading app",
-  "sideEffects": false,
   "keywords": [
     "react",
     "fx",
